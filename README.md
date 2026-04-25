@@ -1,6 +1,6 @@
 **Note: This project is replaced with https://github.com/coreos/etcdlabs**
 
-# etcd-play
+# etcd-play with Hassan
 
 [![Build Status](https://img.shields.io/travis/coreos/etcd-play.svg?style=flat-square)][cistat] [![Godoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)][etcd-play-godoc]   
 
