@@ -8,7 +8,7 @@ etcd-play is a playground for exploring the [`etcd`][etcd-home] distributed key-
 
 ## Play with `etcd` in a web browser
 
-`etcd` uses the [Raft consensus algorithm][raft-home] to replicate data on distributed machines in order to gracefully handle network partitions, node failures, and even leader failures. The etcd team extensively tests failure scenarios in the [etcd functional test suite][etcd-functests]. Real-time results from this testing are available at the [etcd test dashboard][etcd-dash].
+`etcd` uses the [Raft consensus algorithm][raft-home] to replicate data on distributed machines in order to gracefully handle network partitions, node failures, and even leader failures. The etcd team extensively tests failure scenarios in the [etcd functional test suite] [etcd-functests]. Real-time    results from this testing are available at the [etcd test dashboard][etcd-dash].
 
 In Raft, followers are passive, only responding to incoming RPCs. Clients can make requests to any node, follower or leader. Followers, in turn, forward requests to their leader. Last, the leader appends those requests (commands) to its log and sends `AppendEntries` RPCs to all of its followers.
 
@@ -34,7 +34,7 @@ The animation above shows the Leader going down, and shortly a new leader is ele
 
 ### All nodes failure
 
-`etcd` is highly available as long as a quorum of cluster members are operational and can communicate with each other and with clients. 5-node clusters can tolerate failures of any two members. Data loss is still possible in catastrophic events, like all nodes failing. `etcd` persists enough information on stable storage so that members can recover safely from the disk and rejoin the cluster. In particular, `etcd` stores new log entries onto disk before committing them to the log to prevent committed entries from being lost on an unexpected restart.
+`etcd` is highly available as a long as a quorum of cluster members are operational and can communicate with each other and with clients. 5-node clusters can tolerate failures of any two members. Data loss is still possible in catastrophic events, like all nodes failing. `etcd` persists enough information on stable storage so that members can recover safely from the disk and rejoin the cluster. In particular, `etcd` stores new log entries onto disk before committing them to the log to prevent committed entries from being lost on an unexpected restart.
 
 <img src="https://storage.googleapis.com/etcd/assets-etcd-play-old/all-nodes-failures-20160307.gif" alt="all-node-failures"/>
 
